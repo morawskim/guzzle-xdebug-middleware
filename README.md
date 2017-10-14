@@ -1,6 +1,18 @@
 Guzzle Middleware that adds `XDEBUG_SESSION_START` query parameters to all requests
 for a client.
 
+## Install (add to existing project)
+``` bash
+composer require mmo/guzzle-xdebug-middleware
+Using version ^1.0 for mmo/guzzle-xdebug-middleware
+./composer.json has been updated
+Loading composer repositories with package information
+Updating dependencies (including require-dev)
+  - Installing mmo/guzzle-xdebug-middleware (v1.0.0)
+    Cloning 4078657e79d1cd2ab8728eacee5ad824c11cf79f from cache
+....
+```
+
 ## Usage
 
 ```php
