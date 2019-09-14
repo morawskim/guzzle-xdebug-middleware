@@ -1,3 +1,6 @@
+[![Build Status](https://travis-ci.com/morawskim/guzzle-xdebug-middleware.svg?branch=master)](https://travis-ci.com/morawskim/guzzle-xdebug-middleware)
+
+
 Guzzle Middleware that adds `XDEBUG_SESSION_START` query parameters to all requests
 for a client.
 
