@@ -1,7 +1,7 @@
 [![Build Status](https://travis-ci.com/morawskim/guzzle-xdebug-middleware.svg?branch=master)](https://travis-ci.com/morawskim/guzzle-xdebug-middleware)
 
 
-Guzzle Middleware that adds `XDEBUG_SESSION_START` query parameters to all requests
+Guzzle Middleware that adds `XDEBUG_SESSION` query parameters to all requests
 for a client.
 
 ## Install (add to existing project)
@@ -25,5 +25,5 @@ $stack->push($xdebugMiddleware);
 $client = new GuzzleHttp\Client(['handler' => $stack]);
 ```
 
-All requests made by the guzzle client above will include `XDEBUG_SESSION_START=phpstorm` in
+All requests made by the guzzle client above will include `XDEBUG_SESSION=phpstorm` in
 the GET query.

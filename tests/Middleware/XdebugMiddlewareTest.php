@@ -16,7 +16,7 @@ class XdebugMiddlewareTest extends \PHPUnit_Framework_TestCase
         $queryParams = ['a' => 'c'];
         $sessionName = 'phpstorm';
         $this->assertSame(
-            http_build_query($queryParams + ['XDEBUG_SESSION_START' => $sessionName]),
+            http_build_query($queryParams + ['XDEBUG_SESSION' => $sessionName]),
             $this->performWith($sessionName, $queryParams)
         );
     }
@@ -33,10 +33,10 @@ class XdebugMiddlewareTest extends \PHPUnit_Framework_TestCase
 
     public function testOverwriteSessionStartParam()
     {
-        $queryParams = ['XDEBUG_SESSION_START' => 'b'];
+        $queryParams = ['XDEBUG_SESSION' => 'b'];
         $sessionName = 'phpstorm';
         $this->assertSame(
-            http_build_query(['XDEBUG_SESSION_START' => $sessionName]),
+            http_build_query(['XDEBUG_SESSION' => $sessionName]),
             $this->performWith($sessionName, $queryParams)
         );
     }

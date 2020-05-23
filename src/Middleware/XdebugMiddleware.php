@@ -7,7 +7,7 @@ use GuzzleHttp\Psr7\Uri;
 use Psr\Http\Message\RequestInterface;
 
 /**
- * A Guzzle middleware that add XDEBUG_SESSION_START to all requests. Useful for debugging.
+ * A Guzzle middleware that add XDEBUG_SESSION to all requests. Useful for debugging.
  */
 class XdebugMiddleware
 {
@@ -32,10 +32,10 @@ class XdebugMiddleware
     {
         if (!empty($this->xdebug_session_name)) {
             $request = $request->withUri(
-                Uri::withQueryValue($request->getUri(), 'XDEBUG_SESSION_START', $this->xdebug_session_name)
+                Uri::withQueryValue($request->getUri(), 'XDEBUG_SESSION', $this->xdebug_session_name)
             );
         }
-        
+
         return $request;
     }
 

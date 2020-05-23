@@ -1,6 +1,6 @@
 {
     "name": "mmo/guzzle-xdebug-middleware",
-    "description": "Guzzle Middleware that adds XDEBUG_SESSION_START query parameter to all requests for a client.",
+    "description": "Guzzle Middleware that adds XDEBUG_SESSION query parameter to all requests for a client.",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -21,4 +21,4 @@
             "Mmo\\Guzzle\\": "src/"
         }
     }
-} 
+}
